@@ -21,9 +21,12 @@ def price_validator(request):
     price = price_response['price']
     if price < max_price:
         create_price_record(price, max_price)
+        msg = "Price is less than the Max Price, hense result logged"
+    else:
+        msg = "Price is greated thean the Max price"
 
     return http_response(
-        msg="success",
+        msg=msg,
         status=status.HTTP_200_OK,
         data=price_response
     )
