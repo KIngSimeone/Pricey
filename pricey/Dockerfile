@@ -21,4 +21,4 @@ ENV DOCKER_CONTAINER=1
 
 EXPOSE 9020
 
-CMD ["daphne", "-b", "0.0.0.0", "-p", "9020", "dyneryte_config.asgi:application"]
+CMD ["daphne", "-b", "0.0.0.0", "-p", "9020", "pricey.asgi:application"]
