@@ -1,0 +1,9 @@
+version: '3'
+services:
+  api:
+    build: .
+    image: &img pricey-api-v1:latest
+    container_name: pricey-api
+    command: ["daphne", "-b", "0.0.0.0", "-p", "9020", "pricey.asgi:application"]
+    ports:
+      - 9020:9020
