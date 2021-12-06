@@ -10,9 +10,7 @@ def create_price_record(price, max_price):
             price=price,
             max_price=max_price,
         )
-
         return price_record
-
     except Exception as e:
         logger.error(
             "create_price_record@Error")
