@@ -1,13 +1,15 @@
-import requests
 import logging
+
+import requests
+from rest_framework import status
 from rest_framework.decorators import api_view
 
+from .api_utils import ErrorCodes, http_response
 from .utils import create_price_record
-from .api_utils import http_response, ErrorCodes
-from rest_framework import status
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
+
 
 @api_view(['GET'])
 def price_validator(request):

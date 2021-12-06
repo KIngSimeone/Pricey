@@ -1,8 +1,10 @@
-from .models import Prices
 import logging
+
+from .models import Prices
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
+
 
 def create_price_record(price, max_price):
     try:

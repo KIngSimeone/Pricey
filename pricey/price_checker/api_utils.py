@@ -1,5 +1,7 @@
-from rest_framework.response import Response
 from enum import IntEnum
+
+from rest_framework.response import Response
+
 
 class ErrorCodes(IntEnum):
     GENERIC_ERROR = 0
@@ -30,7 +32,6 @@ class ErrorCodes(IntEnum):
     TIMEOUT = 21
     SERVER_ERROR = 22
     SERVICE_UNAVAILABLE = 23
-
 
 
 def http_response(msg, status, data=None, error_code=None):
