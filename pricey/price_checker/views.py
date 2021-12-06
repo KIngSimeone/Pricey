@@ -1,3 +1,5 @@
-from django.shortcuts import render
+import requests
+import logging
 
-# Create your views here.
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
